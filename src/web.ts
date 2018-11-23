@@ -1,5 +1,5 @@
 import { WebPlugin } from '@capacitor/core';
-import { TinyServerPluginPlugin, TinyServerUrl, TinyServerRequest, TinyServerResponse, TinyServerOnRequestCallback } from './definitions';
+import { TinyServerPluginPlugin, TinyServerUrl, TinyServerResponse, TinyServerOnRequestCallback } from './definitions';
 
 class TinyServerUrlImp implements TinyServerUrl {
   private _url: string;
@@ -31,11 +31,12 @@ export class TinyServerPluginWeb extends WebPlugin implements TinyServerPluginPl
   }
 
   onRequest(callback: TinyServerOnRequestCallback): string {
+    console.log(callback);
     return "foobar";
   }
 
   sendResponse(response: TinyServerResponse) {
-    // nothing here
+    console.log(response);
   }
 }
 
