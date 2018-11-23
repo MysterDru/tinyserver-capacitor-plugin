@@ -1,0 +1,47 @@
+{
+  "name": "TinyServer",
+  "version": "0.0.1",
+  "description": "A small webserver that can be run inside of a capacitor application to serve up data.",
+  "main": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rm -rf ./dist",
+    "watch": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "Drew Frisk",
+  "license": "MIT",
+  "dependencies": {
+    "@capacitor/core": "latest"
+  },
+  "devDependencies": {
+    "typescript": "^2.6.2"
+  },
+  "files": [
+    "dist/",
+    "ios/",
+    "android/",
+    "TinyServer.podspec"
+  ],
+  "keywords": [
+    "capacitor",
+    "plugin",
+    "native"
+  ],
+  "capacitor": {
+    "ios": {
+      "src": "ios"
+    },
+    "android": {
+      "src": "android"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keannan5390/tinyserver-capacitor-plugin"
+  },
+  "bugs": {
+    "url": "https://github.com/keannan5390/tinyserver-capacitor-plugin/issues"
+  }
+}
