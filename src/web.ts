@@ -21,21 +21,25 @@ export class TinyServerPluginWeb extends WebPlugin implements TinyServerPluginPl
   }
 
   getURL(): Promise<TinyServerUrl> {
+    console.log("TinyServer for web, getURL. Not supported on web platform");
     let r = new TinyServerUrlImp();
     r.setUrl(window.location.href);
     return Promise.resolve(r);
   }
 
   startServer(): Promise<any> {
+    console.log("TinyServer for web, startServer. Not supported on web platform");
     return Promise.resolve();
   }
 
   onRequest(callback: TinyServerOnRequestCallback): string {
+    console.log("TinyServer for web, onRequest. Not supported on web platform");
     console.log(callback);
     return "foobar";
   }
 
   sendResponse(response: TinyServerResponse) {
+    console.log("TinyServer for web, sendResponse. Not supported on web platform");
     console.log(response);
   }
 }
